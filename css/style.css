@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+.container {
+  width: 90%;
+  margin: auto;
+  /* background-color: whitesmoke; */
+}
+.calculator__block {
+  display: block;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: space-between;
+  background-color: whitesmoke;
+  /* align-items: center; */
+}
+.form-item {
+  position: relative;
+  flex-basis: 30%;
+  margin-bottom: 30px;
+}
+.form-label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #8f8e8e;
+}
+.form-range {
+  position: absolute;
+  top: 60px;
+  color: green;
+}
+.range-interval span {
+  color: #8f8e8e;
+}
+.calcWrapper {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  justify-content: space-between;
+}
+.calcButton,
+.cancelButton {
+  text-transform: uppercase;
+  margin: auto;
+  height: 60px;
+  width: 50%;
+  background-color: rgb(70, 194, 70);
+  color: white;
+  border: none;
+  transform: skewX(-20deg);
+  margin-top: 10px;
+}
+.calcButton:hover,
+.cancelButton:hover {
+  transition: ease-in 0.5s;
+  /* background-color: rgb(109, 44, 184); */
+  background-color: #000;
+}
+.button {
+  font-weight: bold;
+}
+.icon {
+  position: absolute;
+  right: 10px;
+  top: 42px;
+}
+
+/* Table */
+
+.table-block {
+  margin: auto;
+  margin-top: 50px;
+}
+thead {
+  background: #f0f0f0;
+  text-align: center;
+  color: #8f8e8e;
+  font-size: 20px;
+}
+tr {
+  text-align: center;
+}
+tr:nth-child(2n) {
+  background: #f0f0f0; /* Цвет фона */
+}
+tfoot {
+  color: #61bf39;
+  font-weight: bold;
+}
+.cancelBtnWrapper {
+  display: flex;
+  justify-items: flex-end;
+}
+.cancelButton {
+  width: 200px;
+  background-color: rgb(168, 27, 22);
+}
