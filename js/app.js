@@ -144,6 +144,26 @@ function run() {
     table.appendChild(tfoot);
 }
 function clear () {
+    let rng1 = document.getElementById('customRange1'); //rng - это ползунок
+    let rng2 = document.getElementById('customRange2');
+    let annualPersent = document.getElementById('annualPersent');
+
+    let i1 = document.getElementById('i1'); // i1 - input
+    let i2 = document.getElementById('i2');
+
+    let defaultVal = 1000000;
+    let defaultMonth = 1;
+
+    rng1.value = defaultVal;
+    i1.value = defaultVal.toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 ');
+
+    rng2.value = defaultMonth;
+    i2.value = defaultMonth.toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 ');
+
+    annualPersent.value = 10;
+
+
+
     let tableBlock = document.getElementById('table');
     console.log(cancelButton);
     tableBlock.innerHTML = "";

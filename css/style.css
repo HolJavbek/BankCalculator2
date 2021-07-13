@@ -45,6 +45,7 @@ body {
 }
 .calcWrapper {
   display: flex;
+  margin: auto;
   align-items: center;
   height: 70px;
   justify-content: space-between;
@@ -67,6 +68,14 @@ body {
   /* background-color: rgb(109, 44, 184); */
   background-color: #000;
 }
+.cancelBtnWrapper {
+  height: 70px;
+  display: flex;
+  margin: auto;
+}
+.cancelButton {
+  background-color: rgb(168, 27, 22);
+}
 .button {
   font-weight: bold;
 }
@@ -82,6 +91,7 @@ body {
   margin: auto;
   margin-top: 50px;
 }
+/* .table {} */
 thead {
   background: #f0f0f0;
   text-align: center;
@@ -98,11 +108,60 @@ tfoot {
   color: #61bf39;
   font-weight: bold;
 }
-.cancelBtnWrapper {
-  display: flex;
-  justify-items: flex-end;
+
+/* Adaptive */
+
+@media (max-width: 770px) {
+  .container {
+    width: 95%;
+  }
+  .form {
+    flex-direction: column;
+  }
+  .calcButton,
+  .cancelButton {
+    width: 30%;
+    height: 50px;
+    font-size: 12px;
+    padding: 2px;
+  }
+  .table-block {
+    max-width: 425px;
+    overflow: auto;
+  }
+  .table {
+    min-width: 600px;
+  }
+  /* .calcWrapper {
+    margin: auto;
+  } */
 }
-.cancelButton {
-  width: 200px;
-  background-color: rgb(168, 27, 22);
+
+@media (max-width: 460px) {
+  .calcWrapper,
+  .cancelBtnWrapper {
+    height: 50px;
+  }
+  .calcButton,
+  .cancelButton {
+    width: 30%;
+    height: 40px;
+    font-size: 10px;
+    padding: 2px;
+  }
+  .table {
+    min-width: 500px;
+  }
+  .table * {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 360px) {
+  .table {
+    min-width: 400px;
+  }
+  .table * {
+    font-size: 12px;
+  }
 }
